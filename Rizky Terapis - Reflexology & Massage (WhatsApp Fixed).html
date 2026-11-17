@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Rizky Terapis — Reflexology &amp; Massage | Homecare Treatment</title>
+  <meta name="description" content="Layanan pijat refleksi, akupresur, dan terapi keluhan otot panggilan ke rumah (Homecare Treatment) oleh Rizky Terapis. Buka setiap hari pukul 09.00 – 20.00 WIB." />
+
+  <style>
+    /* ==========================================================================
+       1. CSS VARIABLES & RESET (100% PURE INTERNAL CSS - ANTI BLOKIR WHATSAPP iOS)
+       ========================================================================== */
+    :root {
+      --bg-cream: #F7F4F0;
+      --bg-cream-alt: #EFECE6;
+      --bg-card: #FFFFFF;
+      --border-soft: #E3DDD3;
+      --border-taupe: #C9BCAF;
+      --taupe-light: #9C8877;
+      --taupe-main: #7C6652;
+      --taupe-dark: #574637;
+      --charcoal: #231F1E;
+      --text-muted: #5C534B;
+      --gold-soft: #EFE3CE;
+      --gold-text: #6E522B;
+      --wa-green: #3D5A45;
+      --wa-green-hover: #2E4635;
+      --wa-bright: #25D366;
+      --danger-bg: #FDF2F2;
+      --danger-text: #9B1C1C;
+      --danger-border: #F8B4B4;
+      --success-bg: #EFF8F1;
+      --success-text: #225431;
+      --success-border: #B7DFC2;
+
+      --font-serif: Georgia, 'Times New Roman', Times, serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+      --shadow-card: 0 4px 18px rgba(38, 34, 31, 0.06);
+      --shadow-soft: 0 12px 32px rgba(38, 34, 31, 0.08);
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 9999px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--charcoal);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Kunci ketat seluruh SVG agar tidak pernah membesar di WebView iOS / Safari */
+    svg {
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    /* ==========================================================================
+       2. STICKY NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(247, 244, 240, 0.96);
+      border-bottom: 1px solid var(--border-soft);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 12px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .brand-logo-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background-color: var(--bg-cream-alt);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe-main);
+      margin-top: 3px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 4px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--charcoal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-wa-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 9px 15px;
+      border-radius: var(--radius-pill);
+      box-shadow: 0 2px 8px rgba(46, 111, 64, 0.22);
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-wa-nav:hover {
+      background-color: var(--wa-green-hover);
+    }
+
+    .btn-menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background-color: var(--bg-cream-alt);
+      border: 1px solid var(--border-soft);
+      color: var(--charcoal);
+      cursor: pointer;
+    }
+
+    .mobile-drawer {
+      display: none;
+      padding: 10px 0 16px;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-drawer a {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .mobile-drawer a:hover {
+      background-color: var(--bg-cream-alt);
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION
+       ========================================================================== */
+    .hero {
+      padding: 36px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      background-color: var(--bg-cream-alt);
+      border: 1px solid var(--border-soft);
+      color: var(--taupe-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--wa-bright);
+      display: inline-block;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1.18;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .hero-title span {
+      color: var(--taupe-main);
+      font-style: italic;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 26px;
+      line-height: 1.65;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+      justify-content: center;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .btn-primary-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 15px 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(46, 111, 64, 0.22);
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-primary-wa:hover {
+      background-color: var(--wa-green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary-taupe {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--bg-card);
+      color: var(--charcoal);
+      border: 1.5px solid var(--border-taupe);
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 24px;
+      border-radius: 16px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-secondary-taupe:hover {
+      background-color: var(--bg-cream-alt);
+      border-color: var(--taupe-main);
+    }
+
+    .hero-highlights {
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 22px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .highlight-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .highlight-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: var(--bg-cream-alt);
+      border: 1px solid var(--border-soft);
+      color: var(--wa-green);
+      font-weight: 700;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero Spa Card */
+    .hero-visual-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      padding: 20px;
+      box-shadow: var(--shadow-soft);
+      max-width: 440px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .visual-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .visual-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe-main);
+    }
+
+    .visual-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: var(--radius-pill);
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-soft);
+      color: var(--taupe-dark);
+    }
+
+    .spa-illustration-box {
+      width: 100%;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #EFE9DF 0%, #E2D8C8 100%);
+      border: 1px solid var(--border-soft);
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .visual-card-bottom {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .visual-card-title {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    .visual-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .visual-price-tag {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .visual-price-label {
+      display: block;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .visual-price-value {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--taupe-main);
+    }
+
+    /* ==========================================================================
+       4. DAFTAR LAYANAN & PRICE LIST (10 PAKET UTUH)
+       ========================================================================== */
+    .section-services {
+      padding: 56px 0 64px;
+      background-color: var(--bg-cream-alt);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--taupe-main);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.22;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* Filter Tabs */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      padding: 9px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid var(--border-soft);
+      background-color: var(--bg-card);
+      color: var(--taupe-dark);
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--taupe-main);
+    }
+
+    .filter-btn.active {
+      background-color: var(--charcoal);
+      color: #FFFFFF;
+      border-color: var(--charcoal);
+      box-shadow: 0 3px 10px rgba(38, 34, 31, 0.16);
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .service-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-taupe);
+    }
+
+    .service-card.hidden-card {
+      display: none;
+    }
+
+    .card-top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .badges-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      background-color: var(--taupe-main);
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background-color: var(--gold-soft);
+      color: var(--gold-text);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .price-box {
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .price-main {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--taupe-main);
+      line-height: 1.1;
+    }
+
+    .price-short {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--taupe-light);
+      margin-top: 2px;
+    }
+
+    .service-name {
+      font-family: var(--font-serif);
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .service-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .card-footer-row {
+      padding-top: 14px;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .homecare-tag {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--taupe-light);
+    }
+
+    .btn-select-pkg {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: 12px;
+      background-color: var(--bg-cream);
+      border: 1px solid var(--border-taupe);
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-select-pkg:hover {
+      background-color: var(--wa-green);
+      border-color: var(--wa-green);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       5. KEUNGGULAN LAYANAN
+       ========================================================================== */
+    .section-benefits {
+      padding: 56px 0 64px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .benefit-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .benefit-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background-color: var(--bg-cream-alt);
+      border: 1px solid var(--border-soft);
+      color: var(--taupe-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .benefit-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       6. FORMULIR RESERVASI OTOMATIS KE WHATSAPP
+       ========================================================================== */
+    .section-booking {
+      padding: 56px 0 68px;
+      background-color: var(--bg-cream-alt);
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .booking-wrapper {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .booking-info-panel {
+      background-color: var(--taupe-main);
+      color: #FAF8F5;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hours-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 13px;
+      border-radius: var(--radius-pill);
+      background-color: rgba(38, 34, 31, 0.35);
+      border: 1px solid rgba(239, 227, 206, 0.35);
+      color: #EFE3CE;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .booking-info-title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .booking-info-desc {
+      font-size: 14px;
+      color: rgba(250, 248, 245, 0.9);
+      margin-bottom: 22px;
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 14px;
+    }
+
+    .steps-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #EFE3CE;
+      color: var(--charcoal);
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-direct-box {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(250, 248, 245, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .contact-direct-heading {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #EFE3CE;
+    }
+
+    .contact-direct-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: #FFFFFF;
+    }
+
+    .contact-direct-item:hover {
+      text-decoration: underline;
+    }
+
+    /* Form Panel */
+    .booking-form-panel {
+      padding: 28px 22px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .req-star {
+      color: #C81E1E;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background-color: var(--bg-cream);
+      border: 1.5px solid var(--border-soft);
+      color: var(--charcoal);
+      font-size: 15px;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--taupe-main);
+      background-color: #FFFFFF;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .helper-hint {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 5px;
+    }
+
+    /* Random 2 Parts Interactive Checklist Box */
+    .random-parts-box {
+      display: none;
+      padding: 16px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      background-color: var(--bg-cream-alt);
+      border: 1.5px solid var(--border-taupe);
+    }
+
+    .random-parts-box.visible {
+      display: block;
+    }
+
+    .random-parts-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .random-counter-badge {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      color: var(--taupe-dark);
+    }
+
+    .random-counter-badge.complete {
+      background-color: var(--wa-green);
+      border-color: var(--wa-green);
+      color: #FFFFFF;
+    }
+
+    .random-parts-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .part-checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background-color: var(--bg-card);
+      border: 1.5px solid var(--border-soft);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.15s ease;
+    }
+
+    .part-checkbox-label.checked {
+      border-color: var(--wa-green);
+      background-color: var(--success-bg);
+      color: var(--success-text);
+    }
+
+    .part-checkbox-label.disabled {
+      opacity: 0.48;
+      cursor: not-allowed;
+    }
+
+    .part-checkbox-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--wa-green);
+      cursor: pointer;
+    }
+
+    .part-span-full {
+      grid-column: span 2;
+    }
+
+    /* Alert Box (Pengganti alert()) */
+    .feedback-box {
+      display: none;
+      padding: 13px 15px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .feedback-box.error {
+      display: block;
+      background-color: var(--danger-bg);
+      color: var(--danger-text);
+      border: 1px solid var(--danger-border);
+    }
+
+    .feedback-box.success {
+      display: block;
+      background-color: var(--success-bg);
+      color: var(--success-text);
+      border: 1px solid var(--success-border);
+    }
+
+    .btn-submit-wa {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 16px;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(46, 111, 64, 0.24);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit-wa:hover {
+      background-color: var(--wa-green-hover);
+    }
+
+    /* Kotak Konfirmasi Sukses + Tombol Langsung WA & Salin Pesan */
+    .wa-confirm-card {
+      display: none;
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      background-color: var(--success-bg);
+      border: 1.5px solid var(--success-border);
+      color: var(--success-text);
+    }
+
+    .wa-confirm-card.visible {
+      display: block;
+    }
+
+    .wa-confirm-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--charcoal);
+    }
+
+    .wa-confirm-sub {
+      font-size: 13px;
+      line-height: 1.55;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+    }
+
+    .wa-summary-preview {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--charcoal);
+      white-space: pre-line;
+      margin-bottom: 14px;
+    }
+
+    .wa-confirm-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-direct-wa-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 12px;
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(61, 90, 69, 0.22);
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-direct-wa-link:hover {
+      background-color: var(--wa-green-hover);
+    }
+
+    .btn-copy-msg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      padding: 11px 16px;
+      border-radius: 12px;
+      background-color: #FFFFFF;
+      border: 1.5px solid var(--border-taupe);
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-copy-msg:hover {
+      background-color: var(--bg-cream);
+    }
+
+    /* ==========================================================================
+       7. FOOTER & FLOATING WHATSAPP
+       ========================================================================== */
+    .footer {
+      background-color: var(--charcoal);
+      color: #E3DDD3;
+      padding: 48px 0 92px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #3D3631;
+    }
+
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .footer-logo-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background-color: #FAF8F5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-serif);
+      font-size: 19px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-brand-tag {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #B8ABA0;
+    }
+
+    .footer-desc {
+      font-size: 14px;
+      color: #C7BEB5;
+      max-width: 420px;
+      line-height: 1.65;
+    }
+
+    .footer-heading {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #EFE3CE;
+      margin-bottom: 14px;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+      color: #D6CEC4;
+    }
+
+    .footer-list a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+      color: #9E948B;
+      text-align: center;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      right: 16px;
+      bottom: 18px;
+      z-index: 60;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: var(--radius-pill);
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .floating-wa:hover {
+      background-color: var(--wa-green-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       8. RESPONSIVE BREAKPOINTS (TABLET & DESKTOP)
+       ========================================================================== */
+    @media (min-width: 640px) {
+      .hero-title {
+        font-size: 44px;
+      }
+      .hero-cta-group {
+        flex-direction: row;
+        max-width: none;
+      }
+      .form-row-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .parts-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .part-span-full {
+        grid-column: span 2;
+      }
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .wa-confirm-actions {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+      .btn-menu-toggle {
+        display: none;
+      }
+      .mobile-drawer {
+        display: none !important;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+      .footer-grid {
+        grid-template-columns: 2fr 1fr 1.2fr;
+      }
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .footer {
+        padding-bottom: 52px;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        padding: 64px 0 80px;
+      }
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.95fr;
+        gap: 44px;
+      }
+      .hero-content {
+        text-align: left;
+      }
+      .hero-desc {
+        margin-left: 0;
+      }
+      .hero-cta-group {
+        justify-content: flex-start;
+      }
+      .hero-highlights {
+        justify-content: flex-start;
+      }
+      .benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .booking-wrapper {
+        grid-template-columns: 5fr 7fr;
+      }
+      .booking-info-panel {
+        padding: 38px 34px;
+      }
+      .booking-form-panel {
+        padding: 38px 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== 1. STICKY NAVBAR ==================== -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        
+        <!-- Logo Monogram Kaligrafi R dengan Mahkota -->
+        <a href="#beranda" class="brand-link">
+          <div class="brand-logo-box">
+            <svg width="34" height="34" style="width:34px;height:34px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Rizky Terapis">
+              <path d="M24 31C38 22 65 18 71 29C76 38 56 48 44 50" stroke="#26221F" stroke-width="4" stroke-linecap="round"/>
+              <path d="M51 16C48 36 44 63 39 84" stroke="#26221F" stroke-width="4.2" stroke-linecap="round"/>
+              <path d="M35 66C32 76 23 82 18 75C14 69 27 52 50 48C68 45 77 54 71 65C65 75 49 74 44 66C52 72 64 80 76 83" stroke="#26221F" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <g transform="translate(62, 24) rotate(16)">
+                <path d="M2 15L0 5L7 10L12 2L17 10L24 5L22 15H2Z" stroke="#26221F" stroke-width="2.3" stroke-linejoin="round" fill="none"/>
+                <circle cx="0" cy="4" r="1.4" fill="#26221F"/>
+                <circle cx="12" cy="1" r="1.5" fill="#26221F"/>
+                <circle cx="24" cy="4" r="1.4" fill="#26221F"/>
+                <path d="M3 18.5H21" stroke="#26221F" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">RIZKY TERAPIS</span>
+            <span class="brand-subtitle">Reflexology &amp; Massage</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-links" aria-label="Navigasi Utama">
+          <a href="#beranda">Beranda</a>
+          <a href="#layanan">Daftar Layanan</a>
+          <a href="#keunggulan">Keunggulan</a>
+          <a href="#reservasi">Reservasi</a>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+          <a href="https://api.whatsapp.com/send?phone=6285856037351&text=Halo%20Rizky%20Terapis,%20saya%20ingin%20bertanya%20tentang%20layanan%20Homecare%20Treatment."
+             target="_blank" rel="noopener noreferrer" class="btn-wa-nav">
+            <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+
+          <button type="button" id="menu-toggle-btn" class="btn-menu-toggle" aria-label="Buka Menu">
+            <svg width="20" height="20" style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-drawer" class="mobile-drawer">
+        <a href="#beranda" class="drawer-link">Beranda</a>
+        <a href="#layanan" class="drawer-link">Daftar Layanan &amp; Harga</a>
+        <a href="#keunggulan" class="drawer-link">Keunggulan</a>
+        <a href="#reservasi" class="drawer-link">Reservasi Homecare</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="beranda" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Teks Utama -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="status-dot"></span>
+              <span>Homecare Treatment &bull; Buka 09.00 &ndash; 20.00 WIB</span>
+            </div>
+
+            <h1 class="hero-title">
+              Relaksasi Tubuh &amp; Pikiran <span>Langsung di Rumah Anda</span>
+            </h1>
+
+            <p class="hero-desc">
+              Layanan pijat refleksi, akupresur, dan terapi keluhan otot panggilan ke rumah oleh <strong>Rizky Terapis (Rizky Therapy)</strong>. Nikmati perawatan tubuh profesional dengan nyaman dan tenang tanpa perlu keluar rumah.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="https://api.whatsapp.com/send?phone=6285856037351&text=Halo%20Rizky%20Terapis,%20saya%20ingin%20booking%20layanan%20Homecare%20Treatment."
+                 target="_blank" rel="noopener noreferrer" class="btn-primary-wa">
+                <svg width="20" height="20" style="width:20px;height:20px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                </svg>
+                <span>Booking via WhatsApp</span>
+              </a>
+
+              <a href="#layanan" class="btn-secondary-taupe">
+                <span>Lihat Price List</span>
+                <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-highlights">
+              <span class="highlight-item">
+                <span class="highlight-check">&#10003;</span>
+                <span>Buka Setiap Hari <strong>09.00 &ndash; 20.00 WIB</strong></span>
+              </span>
+              <span class="highlight-item">
+                <span class="highlight-check">&#10003;</span>
+                <span>10 Paket Terapi Lengkap</span>
+              </span>
+              <span class="highlight-item">
+                <span class="highlight-check">&#10003;</span>
+                <span>Mulai Rp 50.000</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Kartu Ilustrasi Spa -->
+          <div class="hero-visual-card">
+            <div class="visual-card-top">
+              <span class="visual-label">Rizky Therapy</span>
+              <span class="visual-pill">Homecare Treatment</span>
+            </div>
+
+            <div class="spa-illustration-box">
+              <svg width="360" height="240" style="width:100%;max-width:360px;height:auto;" viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi Spa Lilin Aromaterapi, Bambu, Batu Hangat, dan Bunga Kamboja">
+                <circle cx="200" cy="135" r="102" fill="#FAF6EE" fill-opacity="0.7"/>
+                <circle cx="145" cy="135" r="52" fill="#E8C88B" fill-opacity="0.3"/>
+
+                <!-- Bambu -->
+                <g opacity="0.85">
+                  <rect x="305" y="20" width="13" height="220" rx="4" fill="#7D8C72"/>
+                  <rect x="326" y="40" width="11" height="200" rx="4" fill="#8F9E84"/>
+                  <line x1="303" y1="78" x2="320" y2="78" stroke="#5A6950" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="303" y1="145" x2="320" y2="145" stroke="#5A6950" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="303" y1="205" x2="320" y2="205" stroke="#5A6950" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="324" y1="108" x2="339" y2="108" stroke="#68785D" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="324" y1="175" x2="339" y2="175" stroke="#68785D" stroke-width="2.2" stroke-linecap="round"/>
+                  <path d="M305 77C286 69 272 73 264 82C277 84 292 82 305 77Z" fill="#6D7E62"/>
+                  <path d="M305 78C289 80 278 89 274 99C286 96 297 89 305 78Z" fill="#7D8C72"/>
+                  <path d="M337 107C355 97 370 100 378 109C365 112 350 111 337 107Z" fill="#7D8C72"/>
+                  <path d="M337 108C353 110 364 118 368 128C356 125 345 118 337 108Z" fill="#6D7E62"/>
+                </g>
+
+                <!-- Nampan Kayu -->
+                <ellipse cx="200" cy="228" rx="145" ry="17" fill="#B5A492"/>
+                <ellipse cx="200" cy="225" rx="140" ry="14" fill="#C9B9A6"/>
+
+                <!-- Handuk Gulung -->
+                <g transform="translate(65, 178)">
+                  <rect x="0" y="16" width="84" height="28" rx="14" fill="#F7F4F0" stroke="#D6CEC2" stroke-width="1.5"/>
+                  <ellipse cx="70" cy="30" rx="11" ry="13" fill="#EAE3D8" stroke="#CFC5B7" stroke-width="1.5"/>
+                  <path d="M70 23C74 23 76 26 76 30C76 34 73 36 69 36C66 36 64 33 64 30C64 28 66 26 69 26" stroke="#B5A795" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+
+                <!-- Batu Terapi -->
+                <g transform="translate(215, 165)">
+                  <ellipse cx="44" cy="48" rx="38" ry="14" fill="#685D54"/>
+                  <ellipse cx="44" cy="45" rx="35" ry="11" fill="#7A6E64"/>
+                  <ellipse cx="46" cy="30" rx="28" ry="11" fill="#574D45"/>
+                  <ellipse cx="46" cy="28" rx="25" ry="8.5" fill="#6B6056"/>
+                  <ellipse cx="45" cy="16" rx="18" ry="7.5" fill="#473F38"/>
+                  <ellipse cx="45" cy="14.5" rx="15" ry="5.5" fill="#5C5249"/>
+                </g>
+
+                <!-- Lilin Aromaterapi -->
+                <g transform="translate(122, 106)">
+                  <path d="M26 22C22 14 30 8 26 0" stroke="#9C8B7A" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M38 25C42 16 34 10 38 2" stroke="#9C8B7A" stroke-width="1.8" stroke-linecap="round"/>
+                  <rect x="10" y="48" width="44" height="66" rx="8" fill="#FAF7F2" stroke="#DFD6C7" stroke-width="1.5"/>
+                  <ellipse cx="32" cy="48" rx="22" ry="6" fill="#EFE9DF"/>
+                  <path d="M16 51C16 58 20 60 20 53C20 50 24 52 24 62C24 66 28 66 28 54" fill="#FAF7F2"/>
+                  <line x1="32" y1="48" x2="32" y2="41" stroke="#423931" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M32 21C37 29 39 35 32 41C25 35 27 29 32 21Z" fill="#E69D45"/>
+                  <path d="M32 27C35 32 36 36 32 40C28 36 29 32 32 27Z" fill="#FFF3C4"/>
+                </g>
+
+                <!-- Bunga Kamboja -->
+                <g transform="translate(188, 210)">
+                  <ellipse cx="0" cy="-11" rx="6" ry="11" fill="#FFFFFF" stroke="#E5DEC9" stroke-width="1"/>
+                  <ellipse cx="10" cy="-3" rx="6" ry="11" transform="rotate(72 10 -3)" fill="#FFFFFF" stroke="#E5DEC9" stroke-width="1"/>
+                  <ellipse cx="6" cy="9" rx="6" ry="11" transform="rotate(144 6 9)" fill="#FFFFFF" stroke="#E5DEC9" stroke-width="1"/>
+                  <ellipse cx="-6" cy="9" rx="6" ry="11" transform="rotate(216 -6 9)" fill="#FFFFFF" stroke="#E5DEC9" stroke-width="1"/>
+                  <ellipse cx="-10" cy="-3" rx="6" ry="11" transform="rotate(288 -10 -3)" fill="#FFFFFF" stroke="#E5DEC9" stroke-width="1"/>
+                  <circle cx="0" cy="0" r="5" fill="#E8B954"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="visual-card-bottom">
+              <div>
+                <p class="visual-card-title">Sentuhan Terapi Terarah</p>
+                <p class="visual-card-sub">Refleksi &bull; Akupresur &bull; Massage &bull; Terapi Keluhan</p>
+              </div>
+              <div class="visual-price-tag">
+                <span class="visual-price-label">Tarif Mulai</span>
+                <span class="visual-price-value">Rp 50K</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. DAFTAR LAYANAN & PRICE LIST (10 PAKET UTUH) ==================== -->
+    <section id="layanan" class="section-services">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-eyebrow">Price List &bull; Homecare Treatment</span>
+          <h2 class="section-title">Daftar Layanan &amp; Tarif Terapi</h2>
+          <p class="section-subtitle">
+            Tersedia 10 pilihan paket perawatan dengan durasi 40 hingga 120 menit. Tekan tombol <strong>"Pilih Paket Ini"</strong> untuk langsung mengisi formulir pemesanan.
+          </p>
+        </div>
+
+        <!-- Tab Filter Durasi -->
+        <div class="filter-bar" role="tablist" aria-label="Filter Durasi Layanan">
+          <button type="button" class="filter-btn active" data-filter="all">Semua (10)</button>
+          <button type="button" class="filter-btn" data-filter="120">120 Menit</button>
+          <button type="button" class="filter-btn" data-filter="90">90 Menit</button>
+          <button type="button" class="filter-btn" data-filter="60">60 Menit</button>
+          <button type="button" class="filter-btn" data-filter="40">40 Menit</button>
+        </div>
+
+        <!-- Grid 10 Kartu Layanan -->
+        <div id="services-grid" class="services-grid">
+
+          <!-- 1. Massage (120 Menit) -->
+          <article class="service-card" data-duration="120">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>120 Menit</span>
+                  </span>
+                  <span class="badge-tag">Favorit Pelanggan</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 170.000</span>
+                  <span class="price-short">(170K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Massage (120 Menit)</h3>
+              <p class="service-desc">Area fokus: Kaki, Punggung, Tangan, Wajah, Leher &amp; Pundak.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Massage (120 Menit) — Rp 170.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Akupresur & Refleksi (120 Menit) -->
+          <article class="service-card" data-duration="120">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>120 Menit</span>
+                  </span>
+                  <span class="badge-tag">Favorit Pelanggan</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 170.000</span>
+                  <span class="price-short">(170K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Akupresur &amp; Refleksi (120 Menit)</h3>
+              <p class="service-desc">Area fokus: Punggung, Kaki Refleksi, Tangan, Wajah, Leher &amp; Pundak.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Akupresur & Refleksi (120 Menit) — Rp 170.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Massage (90 Menit) -->
+          <article class="service-card" data-duration="90">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>90 Menit</span>
+                  </span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 135.000</span>
+                  <span class="price-short">(135K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Massage (90 Menit)</h3>
+              <p class="service-desc">Area fokus: Kaki, Punggung, Tangan, Leher &amp; Pundak.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Massage (90 Menit) — Rp 135.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Akupresur & Refleksi (90 Menit) -->
+          <article class="service-card" data-duration="90">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>90 Menit</span>
+                  </span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 135.000</span>
+                  <span class="price-short">(135K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Akupresur &amp; Refleksi (90 Menit)</h3>
+              <p class="service-desc">Area fokus: Punggung, Kaki Refleksi, Tangan, Leher &amp; Pundak.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Akupresur & Refleksi (90 Menit) — Rp 135.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Lumbar Treatment (60 Menit) -->
+          <article class="service-card" data-duration="60">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>60 Menit</span>
+                  </span>
+                  <span class="badge-tag">Terapi Fokus</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 80.000</span>
+                  <span class="price-short">(80K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Lumbar Treatment (60 Menit)</h3>
+              <p class="service-desc">Fokus penanganan pada keluhan area pinggang.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Lumbar Treatment (60 Menit) — Rp 80.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Setai Treatment (60 Menit) -->
+          <article class="service-card" data-duration="60">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>60 Menit</span>
+                  </span>
+                  <span class="badge-tag">Terapi Fokus</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 80.000</span>
+                  <span class="price-short">(80K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Setai Treatment (60 Menit)</h3>
+              <p class="service-desc">Fokus penanganan pada keluhan area punggung.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Setai Treatment (60 Menit) — Rp 80.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Massage (60 Menit) -->
+          <article class="service-card" data-duration="60">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>60 Menit</span>
+                  </span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 100.000</span>
+                  <span class="price-short">(100K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Massage (60 Menit)</h3>
+              <p class="service-desc">Area fokus: Kaki &amp; Punggung.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Massage (60 Menit) — Rp 100.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. 2 Treatment Random (60 Menit) -->
+          <article class="service-card" data-duration="60">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>60 Menit</span>
+                  </span>
+                  <span class="badge-tag">Kombinasi Pilihan</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 100.000</span>
+                  <span class="price-short">(100K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">2 Treatment Random (60 Menit)</h3>
+              <p class="service-desc">Pilih 2 bagian di antara bagian: Kaki, Tangan, Punggung, Wajah, Leher &amp; Pundak.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="2 Treatment Random (60 Menit) — Rp 100.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 9. Kids Therapy (60 Menit) -->
+          <article class="service-card" data-duration="60">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>60 Menit</span>
+                  </span>
+                  <span class="badge-tag">Khusus Anak</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 100.000</span>
+                  <span class="price-short">(100K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Kids Therapy (60 Menit)</h3>
+              <p class="service-desc">Terapi pijat lembut khusus anak usia 5&ndash;10 tahun.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Kids Therapy (60 Menit) — Rp 100.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- 10. Kerokan (40 Menit) -->
+          <article class="service-card" data-duration="40">
+            <div>
+              <div class="card-top-row">
+                <div class="badges-wrap">
+                  <span class="badge-duration">
+                    <svg width="13" height="13" style="width:13px;height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                    </svg>
+                    <span>40 Menit</span>
+                  </span>
+                  <span class="badge-tag">Ekspres</span>
+                </div>
+                <div class="price-box">
+                  <span class="price-main">Rp 50.000</span>
+                  <span class="price-short">(50K)</span>
+                </div>
+              </div>
+              <h3 class="service-name">Kerokan (40 Menit)</h3>
+              <p class="service-desc">Terapi kerokan tradisional untuk meredakan masuk angin dan pegal.</p>
+            </div>
+            <div class="card-footer-row">
+              <span class="homecare-tag">Homecare Treatment</span>
+              <button type="button" class="btn-select-pkg" data-package="Kerokan (40 Menit) — Rp 50.000">
+                <span>Pilih Paket Ini</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. KEUNGGULAN LAYANAN ==================== -->
+    <section id="keunggulan" class="section-benefits">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Mengapa Memilih Kami</span>
+          <h2 class="section-title">Keunggulan Rizky Terapis</h2>
+          <p class="section-subtitle">
+            Pelayanan homecare yang mengutamakan kenyamanan, privasi, dan ketepatan teknik terapi untuk pemulihan tubuh Anda.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="22" height="22" style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Terapis Berpengalaman</h3>
+            <p class="benefit-desc">
+              Menguasai titik refleksi, akupresur, relaksasi tubuh, hingga penanganan keluhan spesifik pinggang dan punggung secara terarah.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="22" height="22" style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Praktis Homecare ke Rumah</h3>
+            <p class="benefit-desc">
+              Terapi dilakukan di ruang nyaman rumah Anda. Bebas antre, bebas macet, dan bisa langsung beristirahat setelah sesi selesai.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="22" height="22" style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <polyline points="12 7 12 12 15 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Jadwal Fleksibel 09.00&ndash;20.00 WIB</h3>
+            <p class="benefit-desc">
+              Melayani pemesanan setiap hari mulai pukul <strong>09.00 pagi hingga 20.00 malam WIB</strong> sesuai waktu luang Anda.
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="22" height="22" style="width:22px;height:22px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Peralatan Bersih &amp; Higienis</h3>
+            <p class="benefit-desc">
+              Selalu menjaga kebersihan perlengkapan terapi serta menggunakan minyak pijat pilihan yang lembut dan menenangkan kulit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. FORMULIR RESERVASI OTOMATIS KE WHATSAPP ==================== -->
+    <section id="reservasi" class="section-booking">
+      <div class="container">
+        <div class="booking-wrapper">
+          
+          <!-- Panel Informasi Kiri -->
+          <div class="booking-info-panel">
+            <div>
+              <div class="hours-pill">
+                <svg width="14" height="14" style="width:14px;height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                </svg>
+                <span>Buka Setiap Hari: 09.00 &ndash; 20.00 WIB</span>
+              </div>
+
+              <h2 class="booking-info-title">Reservasi Homecare Treatment</h2>
+              <p class="booking-info-desc">
+                Isi data pemesanan di formulir ini. Detail pesanan Anda akan otomatis disusun rapi dan diteruskan langsung ke WhatsApp <strong>Rizky Terapis</strong>.
+              </p>
+
+              <ol class="steps-list">
+                <li>
+                  <span class="step-num">1</span>
+                  <span>Pilih paket layanan dan durasi terapi yang diinginkan.</span>
+                </li>
+                <li>
+                  <span class="step-num">2</span>
+                  <span>Lengkapi nama, tanggal, jam kedatangan (09.00 &ndash; 20.00 WIB), dan alamat lengkap.</span>
+                </li>
+                <li>
+                  <span class="step-num">3</span>
+                  <span>Tekan tombol kirim untuk langsung terhubung ke WhatsApp admin.</span>
+                </li>
+              </ol>
+            </div>
+
+            <div class="contact-direct-box">
+              <span class="contact-direct-heading">Informasi Kontak Langsung</span>
+              <span class="contact-direct-item">
+                <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="#EFE3CE" stroke-width="2">
+                  <circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline>
+                </svg>
+                <span>Jam Buka: 09.00 &ndash; 20.00 WIB</span>
+              </span>
+              <a href="https://api.whatsapp.com/send?phone=6285856037351&text=Halo%20Rizky%20Terapis,%20saya%20ingin%20konsultasi%20jadwal%20terapi." target="_blank" rel="noopener noreferrer" class="contact-direct-item">
+                <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="#EFE3CE">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                </svg>
+                <span>085856037351 (+62 858-5603-7351)</span>
+              </a>
+              <a href="https://instagram.com/Rizkytherapy_" target="_blank" rel="noopener noreferrer" class="contact-direct-item">
+                <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="#EFE3CE">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+                <span>@Rizkytherapy_</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Form Input Kanan -->
+          <div class="booking-form-panel">
+            <form id="booking-form" novalidate>
+              
+              <!-- Kotak Pesan Feedback -->
+              <div id="form-feedback" class="feedback-box" role="alert"></div>
+
+              <!-- Nama Lengkap & Nomor WhatsApp Pemesan -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="customer-name" class="form-label">
+                    Nama Lengkap <span class="req-star">*</span>
+                  </label>
+                  <input type="text" id="customer-name" class="form-control" placeholder="Masukkan nama lengkap Anda" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="customer-phone" class="form-label">
+                    Nomor WhatsApp Pemesan <span class="req-star">*</span>
+                  </label>
+                  <input type="tel" id="customer-phone" class="form-control" placeholder="Contoh: 081234567890" required />
+                </div>
+              </div>
+
+              <!-- Pilihan Paket Layanan (10 Paket Lengkap) -->
+              <div class="form-group">
+                <label for="service-select" class="form-label">
+                  Pilih Paket Layanan &amp; Harga <span class="req-star">*</span>
+                </label>
+                <select id="service-select" class="form-control" required>
+                  <option value="" disabled selected>-- Pilih Paket Treatment --</option>
+                  <optgroup label="Kategori 120 Menit">
+                    <option value="Massage (120 Menit) — Rp 170.000">Massage (120 Menit) — Rp 170.000 (170K)</option>
+                    <option value="Akupresur & Refleksi (120 Menit) — Rp 170.000">Akupresur &amp; Refleksi (120 Menit) — Rp 170.000 (170K)</option>
+                  </optgroup>
+                  <optgroup label="Kategori 90 Menit">
+                    <option value="Massage (90 Menit) — Rp 135.000">Massage (90 Menit) — Rp 135.000 (135K)</option>
+                    <option value="Akupresur & Refleksi (90 Menit) — Rp 135.000">Akupresur &amp; Refleksi (90 Menit) — Rp 135.000 (135K)</option>
+                  </optgroup>
+                  <optgroup label="Kategori 60 Menit">
+                    <option value="Lumbar Treatment (60 Menit) — Rp 80.000">Lumbar Treatment (60 Menit) — Rp 80.000 (80K)</option>
+                    <option value="Setai Treatment (60 Menit) — Rp 80.000">Setai Treatment (60 Menit) — Rp 80.000 (80K)</option>
+                    <option value="Massage (60 Menit) — Rp 100.000">Massage (60 Menit) — Rp 100.000 (100K)</option>
+                    <option value="2 Treatment Random (60 Menit) — Rp 100.000">2 Treatment Random (60 Menit) — Rp 100.000 (100K)</option>
+                    <option value="Kids Therapy (60 Menit) — Rp 100.000">Kids Therapy (60 Menit) — Rp 100.000 (100K)</option>
+                  </optgroup>
+                  <optgroup label="Kategori 40 Menit">
+                    <option value="Kerokan (40 Menit) — Rp 50.000">Kerokan (40 Menit) — Rp 50.000 (50K)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <!-- Checklist Interaktif 2 Bagian (Muncul khusus untuk 2 Treatment Random) -->
+              <div id="random-parts-box" class="random-parts-box">
+                <div class="random-parts-header">
+                  <span class="form-label" style="margin-bottom:0;">Pilih 2 Bagian Tubuh <span class="req-star">*</span></span>
+                  <span id="random-counter-badge" class="random-counter-badge">0 / 2 dipilih</span>
+                </div>
+                <p class="random-parts-sub">Pilih tepat <strong>2 bagian</strong> di antara bagian berikut:</p>
+                <div class="parts-grid">
+                  <label class="part-checkbox-label">
+                    <input type="checkbox" class="random-part-cb" value="Kaki" />
+                    <span>Kaki</span>
+                  </label>
+                  <label class="part-checkbox-label">
+                    <input type="checkbox" class="random-part-cb" value="Tangan" />
+                    <span>Tangan</span>
+                  </label>
+                  <label class="part-checkbox-label">
+                    <input type="checkbox" class="random-part-cb" value="Punggung" />
+                    <span>Punggung</span>
+                  </label>
+                  <label class="part-checkbox-label">
+                    <input type="checkbox" class="random-part-cb" value="Wajah" />
+                    <span>Wajah</span>
+                  </label>
+                  <label class="part-checkbox-label part-span-full">
+                    <input type="checkbox" class="random-part-cb" value="Leher & Pundak" />
+                    <span>Leher &amp; Pundak</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Tanggal & Jam Kedatangan -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="booking-date" class="form-label">
+                    Tanggal Terapi <span class="req-star">*</span>
+                  </label>
+                  <input type="date" id="booking-date" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="booking-time" class="form-label">
+                    Jam Kedatangan <span class="req-star">*</span>
+                  </label>
+                  <input type="time" id="booking-time" class="form-control" min="09:00" max="20:00" required />
+                  <span class="helper-hint">Jam buka: 09.00 &ndash; 20.00 WIB</span>
+                </div>
+              </div>
+
+              <!-- Alamat Lengkap Homecare -->
+              <div class="form-group">
+                <label for="customer-address" class="form-label">
+                  Alamat Lengkap Homecare <span class="req-star">*</span>
+                </label>
+                <textarea id="customer-address" class="form-control" rows="2" placeholder="Nama jalan, nomor rumah, RT/RW, kelurahan/kecamatan, atau patokan lokasi..." required></textarea>
+              </div>
+
+              <!-- Catatan Keluhan -->
+              <div class="form-group">
+                <label for="customer-notes" class="form-label">
+                  Catatan Keluhan <span style="font-weight:400;color:#8C7868;">(Opsional)</span>
+                </label>
+                <input type="text" id="customer-notes" class="form-control" placeholder="Contoh: Pegal di bagian pinggang, pundak kaku, atau masuk angin" />
+              </div>
+
+              <!-- Tombol Submit WhatsApp -->
+              <button type="submit" class="btn-submit-wa">
+                <svg width="20" height="20" style="width:20px;height:20px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                </svg>
+                <span>Kirim Reservasi ke WhatsApp</span>
+              </button>
+
+              <!-- Kotak Konfirmasi Sukses + Tautan Langsung WhatsApp & Salin Pesan -->
+              <div id="wa-confirm-card" class="wa-confirm-card" aria-live="polite">
+                <p class="wa-confirm-title">Format Pesan Reservasi Siap Dikirim!</p>
+                <p class="wa-confirm-sub">
+                  Jika aplikasi WhatsApp tidak terbuka otomatis, tekan tombol <strong>"Lanjutkan ke WhatsApp Sekarang"</strong> di bawah ini atau salin teks pesanan Anda:
+                </p>
+                <div id="wa-summary-preview" class="wa-summary-preview"></div>
+                <div class="wa-confirm-actions">
+                  <a id="wa-direct-anchor" href="https://api.whatsapp.com/send?phone=6285856037351" target="_blank" rel="noopener noreferrer" class="btn-direct-wa-link">
+                    <svg width="18" height="18" style="width:18px;height:18px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                    </svg>
+                    <span>Lanjutkan ke WhatsApp Sekarang</span>
+                  </a>
+                  <button type="button" id="btn-copy-msg" class="btn-copy-msg">
+                    <svg width="16" height="16" style="width:16px;height:16px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span id="copy-btn-label">Salin Teks Pesan</span>
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 6. FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div>
+          <div class="footer-brand-row">
+            <div class="footer-logo-box">
+              <svg width="32" height="32" style="width:32px;height:32px;" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 31C38 22 65 18 71 29C76 38 56 48 44 50" stroke="#26221F" stroke-width="4" stroke-linecap="round"/>
+                <path d="M51 16C48 36 44 63 39 84" stroke="#26221F" stroke-width="4.2" stroke-linecap="round"/>
+                <path d="M35 66C32 76 23 82 18 75C14 69 27 52 50 48C68 45 77 54 71 65C65 75 49 74 44 66C52 72 64 80 76 83" stroke="#26221F" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <g transform="translate(62, 24) rotate(16)">
+                  <path d="M2 15L0 5L7 10L12 2L17 10L24 5L22 15H2Z" stroke="#26221F" stroke-width="2.3" stroke-linejoin="round" fill="none"/>
+                  <path d="M3 18.5H21" stroke="#26221F" stroke-width="2" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </div>
+            <div>
+              <p class="footer-brand-name">RIZKY TERAPIS</p>
+              <p class="footer-brand-tag">Reflexology &amp; Massage</p>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Rizky Therapy &mdash; Layanan pijat refleksi, akupresur, dan terapi keluhan otot panggilan ke rumah (Homecare Treatment). Melayani dengan sepenuh hati untuk memulihkan kebugaran tubuh Anda.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Menu Cepat</h3>
+          <ul class="footer-list">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#layanan">Daftar Layanan &amp; Harga</a></li>
+            <li><a href="#keunggulan">Keunggulan</a></li>
+            <li><a href="#reservasi">Formulir Reservasi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Kontak &amp; Jam Buka</h3>
+          <ul class="footer-list">
+            <li>Jam Buka: 09.00 &ndash; 20.00 WIB</li>
+            <li><a href="https://api.whatsapp.com/send?phone=6285856037351&text=Halo%20Rizky%20Terapis,%20saya%20ingin%20bertanya%20mengenai%20layanan%20pijat%20homecare." target="_blank" rel="noopener noreferrer">WA / Telp: 085856037351</a></li>
+            <li><a href="https://instagram.com/Rizkytherapy_" target="_blank" rel="noopener noreferrer">Instagram: @Rizkytherapy_</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year-now">2026</span> Rizky Terapis &mdash; Reflexology &amp; Massage. Hak Cipta Dilindungi.</p>
+        <p>Homecare Treatment &bull; Buka Setiap Hari 09.00 &ndash; 20.00 WIB</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <a href="https://api.whatsapp.com/send?phone=6285856037351&text=Halo%20Rizky%20Terapis,%20saya%20ingin%20booking%20jadwal%20terapi."
+     target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Chat WhatsApp Rizky Terapis">
+    <svg width="20" height="20" style="width:20px;height:20px;" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+    </svg>
+    <span>Chat WhatsApp</span>
+  </a>
+
+  <!-- ==================== VANILLA JAVASCRIPT (RINGAN & OFFLINE-SAFE) ==================== -->
+  <script>
+    (function () {
+      // 1. Mobile Navigation Drawer
+      var menuToggleBtn = document.getElementById('menu-toggle-btn');
+      var mobileDrawer = document.getElementById('mobile-drawer');
+      if (menuToggleBtn && mobileDrawer) {
+        menuToggleBtn.addEventListener('click', function () {
+          mobileDrawer.classList.toggle('open');
+        });
+        var drawerLinks = mobileDrawer.querySelectorAll('.drawer-link');
+        for (var i = 0; i < drawerLinks.length; i++) {
+          drawerLinks[i].addEventListener('click', function () {
+            mobileDrawer.classList.remove('open');
+          });
+        }
+      }
+
+      // 2. Filter Durasi Kartu Layanan
+      var filterBtns = document.querySelectorAll('.filter-btn');
+      var serviceCards = document.querySelectorAll('#services-grid .service-card');
+
+      for (var j = 0; j < filterBtns.length; j++) {
+        filterBtns[j].addEventListener('click', function () {
+          var chosen = this.getAttribute('data-filter');
+
+          for (var k = 0; k < filterBtns.length; k++) {
+            filterBtns[k].classList.remove('active');
+          }
+          this.classList.add('active');
+
+          for (var m = 0; m < serviceCards.length; m++) {
+            var cardDur = serviceCards[m].getAttribute('data-duration');
+            if (chosen === 'all' || cardDur === chosen) {
+              serviceCards[m].classList.remove('hidden-card');
+            } else {
+              serviceCards[m].classList.add('hidden-card');
+            }
+          }
+        });
+      }
+
+      // 3. Elemen Form & Paket 2 Treatment Random
+      var serviceSelect = document.getElementById('service-select');
+      var randomPartsBox = document.getElementById('random-parts-box');
+      var randomCounterBadge = document.getElementById('random-counter-badge');
+      var randomCheckboxes = document.querySelectorAll('.random-part-cb');
+      var feedbackBox = document.getElementById('form-feedback');
+      var RANDOM_PKG_NAME = '2 Treatment Random (60 Menit) — Rp 100.000';
+
+      function showMessage(text, type) {
+        if (!feedbackBox) return;
+        feedbackBox.textContent = text;
+        feedbackBox.className = 'feedback-box ' + type;
+      }
+
+      function toggleRandomBox() {
+        if (!serviceSelect || !randomPartsBox) return;
+        if (serviceSelect.value === RANDOM_PKG_NAME) {
+          randomPartsBox.classList.add('visible');
+        } else {
+          randomPartsBox.classList.remove('visible');
+        }
+      }
+
+      function syncRandomCheckboxes(changedEl) {
+        var checkedList = [];
+        for (var i = 0; i < randomCheckboxes.length; i++) {
+          if (randomCheckboxes[i].checked) {
+            checkedList.push(randomCheckboxes[i]);
+          }
+        }
+
+        if (checkedList.length > 2 && changedEl) {
+          changedEl.checked = false;
+          showMessage('Maksimal pilih 2 bagian tubuh untuk paket 2 Treatment Random.', 'error');
+          return;
+        }
+
+        var count = checkedList.length;
+        if (randomCounterBadge) {
+          randomCounterBadge.textContent = count + ' / 2 dipilih';
+          if (count === 2) {
+            randomCounterBadge.classList.add('complete');
+          } else {
+            randomCounterBadge.classList.remove('complete');
+          }
+        }
+
+        for (var n = 0; n < randomCheckboxes.length; n++) {
+          var cb = randomCheckboxes[n];
+          var lbl = cb.parentElement;
+          var disableOther = count >= 2 && !cb.checked;
+          cb.disabled = disableOther;
+
+          if (lbl) {
+            if (cb.checked) {
+              lbl.classList.add('checked');
+            } else {
+              lbl.classList.remove('checked');
+            }
+            if (disableOther) {
+              lbl.classList.add('disabled');
+            } else {
+              lbl.classList.remove('disabled');
+            }
+          }
+        }
+      }
+
+      if (serviceSelect) {
+        serviceSelect.addEventListener('change', toggleRandomBox);
+      }
+
+      for (var p = 0; p < randomCheckboxes.length; p++) {
+        randomCheckboxes[p].addEventListener('change', function () {
+          syncRandomCheckboxes(this);
+        });
+      }
+
+      // 4. Tombol "Pilih Paket Ini"
+      var selectPkgBtns = document.querySelectorAll('.btn-select-pkg');
+      for (var q = 0; q < selectPkgBtns.length; q++) {
+        selectPkgBtns[q].addEventListener('click', function () {
+          var pkg = this.getAttribute('data-package');
+          if (serviceSelect && pkg) {
+            serviceSelect.value = pkg;
+            toggleRandomBox();
+          }
+
+          var targetSection = document.getElementById('reservasi');
+          if (targetSection && targetSection.scrollIntoView) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+
+          if (pkg === RANDOM_PKG_NAME) {
+            showMessage('Paket "' + pkg + '" dipilih. Silakan centang 2 bagian tubuh yang diinginkan pada formulir di bawah.', 'success');
+          } else {
+            showMessage('Paket "' + pkg + '" dipilih. Silakan lengkapi data reservasi di bawah.', 'success');
+          }
+        });
+      }
+
+      // 5. Minimal Tanggal Hari Ini & Tahun Footer
+      var dateInput = document.getElementById('booking-date');
+      if (dateInput) {
+        var now = new Date();
+        var yyyy = now.getFullYear();
+        var mm = String(now.getMonth() + 1).padStart(2, '0');
+        var dd = String(now.getDate()).padStart(2, '0');
+        dateInput.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+      }
+
+      var yearNow = document.getElementById('year-now');
+      if (yearNow) {
+        yearNow.textContent = new Date().getFullYear();
+      }
+
+      // 6. Submit Formulir Reservasi ke WhatsApp (6285856037351)
+      var bookingForm = document.getElementById('booking-form');
+      var waConfirmCard = document.getElementById('wa-confirm-card');
+      var waSummaryPreview = document.getElementById('wa-summary-preview');
+      var waDirectAnchor = document.getElementById('wa-direct-anchor');
+      var btnCopyMsg = document.getElementById('btn-copy-msg');
+      var copyBtnLabel = document.getElementById('copy-btn-label');
+      var latestWaText = '';
+
+      if (btnCopyMsg) {
+        btnCopyMsg.addEventListener('click', function () {
+          if (!latestWaText) return;
+          var tempArea = document.createElement('textarea');
+          tempArea.value = latestWaText;
+          tempArea.setAttribute('readonly', '');
+          tempArea.style.position = 'fixed';
+          tempArea.style.opacity = '0';
+          document.body.appendChild(tempArea);
+          tempArea.select();
+          try {
+            document.execCommand('copy');
+            if (copyBtnLabel) copyBtnLabel.textContent = 'Teks Berhasil Disalin!';
+            setTimeout(function () {
+              if (copyBtnLabel) copyBtnLabel.textContent = 'Salin Teks Pesan';
+            }, 2500);
+          } catch (err) {
+            showMessage('Silakan blok dan salin teks ringkasan di atas secara manual.', 'error');
+          }
+          document.body.removeChild(tempArea);
+        });
+      }
+
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          var nameVal = document.getElementById('customer-name').value.trim();
+          var phoneVal = document.getElementById('customer-phone').value.trim();
+          var serviceVal = serviceSelect ? serviceSelect.value : '';
+          var dateVal = document.getElementById('booking-date').value;
+          var timeVal = document.getElementById('booking-time').value;
+          var addrVal = document.getElementById('customer-address').value.trim();
+          var notesVal = document.getElementById('customer-notes').value.trim();
+
+          if (!nameVal || !phoneVal || !serviceVal || !dateVal || !timeVal || !addrVal) {
+            showMessage('Mohon lengkapi Nama Lengkap, Nomor WhatsApp Pemesan, Paket Layanan, Tanggal Terapi, Jam Kedatangan, dan Alamat Homecare terlebih dahulu.', 'error');
+            return;
+          }
+
+          var chosenParts = [];
+          for (var r = 0; r < randomCheckboxes.length; r++) {
+            if (randomCheckboxes[r].checked) {
+              chosenParts.push(randomCheckboxes[r].value);
+            }
+          }
+
+          if (serviceVal === RANDOM_PKG_NAME && chosenParts.length !== 2) {
+            showMessage('Mohon pilih tepat 2 bagian tubuh di antara: Kaki, Tangan, Punggung, Wajah, Leher & Pundak.', 'error');
+            return;
+          }
+
+          if (timeVal < '09:00' || timeVal > '20:00') {
+            showMessage('Jam kedatangan berada di luar jam operasional. Silakan pilih jam antara pukul 09.00 hingga 20.00 WIB.', 'error');
+            return;
+          }
+
+          var formattedDate = dateVal;
+          try {
+            var parts = dateVal.split('-');
+            var dt = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+            formattedDate = dt.toLocaleDateString('id-ID', {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
+            });
+          } catch (err) {
+            formattedDate = dateVal;
+          }
+
+          var serviceLine = serviceVal === RANDOM_PKG_NAME
+            ? '*Paket Layanan:* ' + serviceVal + '\n*Pilihan 2 Bagian:* ' + chosenParts.join(' & ')
+            : '*Paket Layanan:* ' + serviceVal;
+
+          var notesLine = notesVal ? notesVal : 'Tidak ada catatan khusus';
+
+          latestWaText = [
+            'Halo *Rizky Terapis*, saya ingin melakukan reservasi *Homecare Treatment*:',
+            '',
+            '*Nama Pelanggan:* ' + nameVal,
+            '*No. WhatsApp:* ' + phoneVal,
+            serviceLine,
+            '*Tanggal:* ' + formattedDate,
+            '*Jam Kedatangan:* ' + timeVal + ' WIB',
+            '*Alamat Homecare:* ' + addrVal,
+            '*Catatan Keluhan:* ' + notesLine,
+            '',
+            'Mohon konfirmasi ketersediaan jadwalnya. Terima kasih.'
+          ].join('\n');
+
+          var waUrl = 'https://api.whatsapp.com/send?phone=6285856037351&text=' + encodeURIComponent(latestWaText);
+
+          if (waSummaryPreview) waSummaryPreview.textContent = latestWaText;
+          if (waDirectAnchor) waDirectAnchor.setAttribute('href', waUrl);
+          if (waConfirmCard) waConfirmCard.classList.add('visible');
+
+          showMessage('Pesanan berhasil disiapkan! Membuka WhatsApp ke nomor 085856037351...', 'success');
+          window.open(waUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
