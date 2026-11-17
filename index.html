@@ -897,6 +897,153 @@
       margin-top: 5px;
     }
 
+    /* ==========================================================================
+       SHARELOK GPS BOX STYLING
+       ========================================================================== */
+    .sharelok-box {
+      padding: 16px;
+      border-radius: 16px;
+      background-color: var(--bg-cream);
+      border: 1.5px solid var(--border-taupe);
+    }
+
+    .btn-gps-capture {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 16px;
+      border-radius: 12px;
+      background-color: var(--taupe-dark);
+      color: #FFFFFF;
+      border: none;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(87, 70, 55, 0.2);
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn-gps-capture:hover {
+      background-color: var(--charcoal);
+    }
+
+    .btn-gps-capture:disabled {
+      opacity: 0.65;
+      cursor: wait;
+    }
+
+    .gps-result-card {
+      display: none;
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background-color: var(--success-bg);
+      border: 1.5px solid var(--success-border);
+      color: var(--success-text);
+    }
+
+    .gps-result-card.visible {
+      display: block;
+    }
+
+    .gps-result-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .gps-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      background-color: var(--wa-green);
+      color: #FFFFFF;
+    }
+
+    .btn-check-maps {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      background-color: #FFFFFF;
+      border: 1px solid var(--success-border);
+      color: var(--wa-green);
+    }
+
+    .btn-check-maps:hover {
+      background-color: var(--bg-cream);
+    }
+
+    .gps-coords-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      word-break: break-all;
+    }
+
+    .gps-error-note {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background-color: var(--danger-bg);
+      border: 1px solid var(--danger-border);
+      color: var(--danger-text);
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    .gps-error-note.visible {
+      display: block;
+    }
+
+    .manual-sharelok-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 13px;
+      padding: 11px 12px;
+      border-radius: 12px;
+      background-color: #FFFFFF;
+      border: 1.5px solid var(--border-soft);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--charcoal);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .manual-sharelok-label.checked {
+      border-color: var(--wa-green);
+      background-color: var(--success-bg);
+      color: var(--success-text);
+    }
+
+    .manual-sharelok-label input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      margin-top: 2px;
+      accent-color: var(--wa-green);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .landmark-wrap {
+      margin-top: 13px;
+    }
+
     /* Random 2 Parts Interactive Checklist Box */
     .random-parts-box {
       display: none;
@@ -1120,111 +1267,6 @@
 
     .btn-copy-msg:hover {
       background-color: var(--bg-cream);
-    }
-
-    /* Sharelok GPS & Opsi Lokasi Homecare */
-    .address-header-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-
-    .btn-sharelok-gps {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 13px;
-      border-radius: var(--radius-pill);
-      background-color: var(--bg-cream-alt);
-      border: 1.5px solid var(--taupe-main);
-      color: var(--taupe-dark);
-      font-size: 12.5px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .btn-sharelok-gps:hover {
-      background-color: var(--taupe-main);
-      color: #FFFFFF;
-    }
-
-    .btn-sharelok-gps:disabled {
-      opacity: 0.65;
-      cursor: wait;
-    }
-
-    .gps-status-card {
-      display: none;
-      margin-top: 8px;
-      margin-bottom: 10px;
-      padding: 11px 13px;
-      border-radius: 12px;
-      font-size: 12.5px;
-      line-height: 1.5;
-    }
-
-    .gps-status-card.loading {
-      display: block;
-      background-color: var(--bg-cream-alt);
-      border: 1px solid var(--border-taupe);
-      color: var(--taupe-dark);
-    }
-
-    .gps-status-card.success {
-      display: block;
-      background-color: var(--success-bg);
-      border: 1px solid var(--success-border);
-      color: var(--success-text);
-    }
-
-    .gps-status-card.error {
-      display: block;
-      background-color: var(--danger-bg);
-      border: 1px solid var(--danger-border);
-      color: var(--danger-text);
-    }
-
-    .gps-map-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 6px;
-      padding: 5px 11px;
-      border-radius: 8px;
-      background-color: #FFFFFF;
-      border: 1px solid var(--success-border);
-      color: var(--wa-green);
-      font-weight: 700;
-      font-size: 12px;
-      text-decoration: none;
-    }
-
-    .gps-map-link:hover {
-      background-color: var(--wa-green);
-      color: #FFFFFF;
-    }
-
-    .manual-sharelok-label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .manual-sharelok-label input[type="checkbox"] {
-      width: 16px;
-      height: 16px;
-      accent-color: var(--wa-green);
-      cursor: pointer;
     }
 
     /* ==========================================================================
@@ -2047,7 +2089,7 @@
 
               <h2 class="booking-info-title">Reservasi Homecare Treatment</h2>
               <p class="booking-info-desc">
-                Isi data pemesanan di formulir ini. Detail pesanan Anda akan otomatis disusun rapi dan diteruskan langsung ke WhatsApp <strong>Rizky Terapis</strong>.
+                Isi data pemesanan di formulir ini. Detail pesanan dan titik lokasi sharelok Anda akan otomatis disusun rapi ke WhatsApp <strong>Rizky Terapis</strong>.
               </p>
 
               <ol class="steps-list">
@@ -2057,7 +2099,7 @@
                 </li>
                 <li>
                   <span class="step-num">2</span>
-                  <span>Lengkapi nama, tanggal, jam kedatangan (09.00 &ndash; 20.00 WIB), dan alamat lengkap.</span>
+                  <span>Isi nama, tanggal, jam kedatangan (09.00 &ndash; 20.00 WIB), lalu ambil titik <strong>Sharelok GPS</strong>.</span>
                 </li>
                 <li>
                   <span class="step-num">3</span>
@@ -2172,30 +2214,68 @@
                 </div>
               </div>
 
-              <!-- Alamat Lengkap Homecare & Sharelok GPS -->
-              <div class="form-group">
-                <div class="address-header-row">
-                  <label for="customer-address" class="form-label" style="margin-bottom:0;">
-                    Alamat / Patokan Lokasi Homecare <span class="req-star">*</span>
+              <!-- Tanggal & Jam Kedatangan -->
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="booking-date" class="form-label">
+                    Tanggal Terapi <span class="req-star">*</span>
                   </label>
-                  <button type="button" id="btn-get-gps" class="btn-sharelok-gps">
-                    <svg width="14" height="14" style="width:14px;height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <input type="date" id="booking-date" class="form-control" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="booking-time" class="form-label">
+                    Jam Kedatangan <span class="req-star">*</span>
+                  </label>
+                  <input type="time" id="booking-time" class="form-control" min="09:00" max="20:00" required />
+                  <span class="helper-hint">Jam buka: 09.00 &ndash; 20.00 WIB</span>
+                </div>
+              </div>
+
+              <!-- Lokasi Homecare (Sharelok GPS Otomatis & Opsi Sharelok Manual WA) -->
+              <div class="form-group">
+                <label class="form-label">
+                  Lokasi Homecare (Sharelok GPS) <span class="req-star">*</span>
+                </label>
+
+                <div class="sharelok-box">
+                  <button type="button" id="btn-gps-capture" class="btn-gps-capture">
+                    <svg width="18" height="18" style="width:18px;height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                       <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    <span id="btn-get-gps-label">Ambil Lokasi Otomatis (Sharelok GPS)</span>
+                    <span id="gps-btn-text">Ambil Lokasi Saya (Sharelok GPS)</span>
                   </button>
+
+                  <!-- Hasil Titik GPS Terkunci -->
+                  <div id="gps-result-card" class="gps-result-card">
+                    <div class="gps-result-top">
+                      <span class="gps-status-pill">&#10003; Titik Lokasi GPS Terkunci</span>
+                      <a id="gps-check-maps-link" href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-check-maps">
+                        <span>Cek Titik Maps</span>
+                        <span>&nearr;</span>
+                      </a>
+                    </div>
+                    <p id="gps-coords-text" class="gps-coords-text"></p>
+                  </div>
+
+                  <!-- Catatan jika GPS Gagal / Ditolak -->
+                  <div id="gps-error-note" class="gps-error-note"></div>
+
+                  <!-- Opsi Alternatif: Kirim Sharelok Manual di WhatsApp -->
+                  <label id="manual-sharelok-label" class="manual-sharelok-label">
+                    <input type="checkbox" id="manual-sharelok-cb" />
+                    <span>Saya akan kirim sharelok manual langsung lewat chat WhatsApp</span>
+                  </label>
+
+                  <!-- Patokan Rumah (Opsional) -->
+                  <div class="landmark-wrap">
+                    <label for="house-landmark" class="form-label" style="font-size:13px;margin-bottom:5px;">
+                      Patokan Rumah <span style="font-weight:400;color:#8C7868;">(Opsional)</span>
+                    </label>
+                    <input type="text" id="house-landmark" class="form-control" style="background-color:#FFFFFF;" placeholder="Contoh: Pagar hitam / depan masjid / gang sebelah warung" />
+                  </div>
                 </div>
-
-                <!-- Status Hasil Pengambilan Koordinat GPS -->
-                <div id="gps-status-card" class="gps-status-card" aria-live="polite"></div>
-
-                <textarea id="customer-address" class="form-control" rows="2" placeholder="Nama jalan, nomor rumah, warna pagar, atau patokan lokasi..." required></textarea>
-
-                <label class="manual-sharelok-label">
-                  <input type="checkbox" id="manual-sharelok-cb" />
-                  <span>Saya akan kirim Sharelok manual lewat chat WhatsApp setelah ini</span>
-                </label>
               </div>
 
               <!-- Catatan Keluhan -->
@@ -2469,73 +2549,67 @@
         yearNow.textContent = new Date().getFullYear();
       }
 
-      // 5B. Fitur Sharelok GPS Otomatis & Opsi Sharelok Manual
-      var btnGetGps = document.getElementById('btn-get-gps');
-      var btnGetGpsLabel = document.getElementById('btn-get-gps-label');
-      var gpsStatusCard = document.getElementById('gps-status-card');
+      // 6. Fitur Sharelok GPS Otomatis & Opsi Sharelok Manual WhatsApp
+      var btnGpsCapture = document.getElementById('btn-gps-capture');
+      var gpsBtnText = document.getElementById('gps-btn-text');
+      var gpsResultCard = document.getElementById('gps-result-card');
+      var gpsCheckMapsLink = document.getElementById('gps-check-maps-link');
+      var gpsCoordsText = document.getElementById('gps-coords-text');
+      var gpsErrorNote = document.getElementById('gps-error-note');
       var manualSharelokCb = document.getElementById('manual-sharelok-cb');
-      var customerAddressInput = document.getElementById('customer-address');
+      var manualSharelokLabel = document.getElementById('manual-sharelok-label');
       var capturedMapsUrl = '';
-      var capturedCoordsText = '';
 
-      if (manualSharelokCb && customerAddressInput) {
+      if (manualSharelokCb && manualSharelokLabel) {
         manualSharelokCb.addEventListener('change', function () {
           if (this.checked) {
-            customerAddressInput.placeholder = 'Opsional: Tulis patokan singkat (misal: rumah pagar hitam / pesan untuk orang tua)...';
+            manualSharelokLabel.classList.add('checked');
+            if (gpsErrorNote) gpsErrorNote.classList.remove('visible');
           } else {
-            customerAddressInput.placeholder = 'Nama jalan, nomor rumah, warna pagar, atau patokan lokasi...';
+            manualSharelokLabel.classList.remove('checked');
           }
         });
       }
 
-      if (btnGetGps && gpsStatusCard) {
-        btnGetGps.addEventListener('click', function () {
+      if (btnGpsCapture) {
+        btnGpsCapture.addEventListener('click', function () {
           if (!navigator.geolocation) {
-            gpsStatusCard.className = 'gps-status-card error';
-            gpsStatusCard.textContent = 'Browser perangkat Anda tidak mendukung akses lokasi GPS otomatis. Silakan tulis patokan alamat atau centang opsi kirim Sharelok manual di WhatsApp.';
+            if (gpsErrorNote) {
+              gpsErrorNote.textContent = 'Browser perangkat ini tidak mendukung GPS otomatis. Silakan centang opsi "Saya akan kirim sharelok manual langsung lewat chat WhatsApp" di bawah.';
+              gpsErrorNote.classList.add('visible');
+            }
             return;
           }
 
-          btnGetGps.disabled = true;
-          if (btnGetGpsLabel) btnGetGpsLabel.textContent = 'Mendeteksi Titik GPS...';
-          gpsStatusCard.className = 'gps-status-card loading';
-          gpsStatusCard.textContent = 'Sedang mengambil koordinat lokasi Anda. Jika muncul permintaan izin lokasi di layar, silakan ketuk "Izinkan / Allow"...';
+          btnGpsCapture.disabled = true;
+          if (gpsBtnText) gpsBtnText.textContent = 'Sedang mencari titik GPS Anda...';
+          if (gpsErrorNote) gpsErrorNote.classList.remove('visible');
 
           navigator.geolocation.getCurrentPosition(
-            function (pos) {
-              var lat = pos.coords.latitude.toFixed(6);
-              var lng = pos.coords.longitude.toFixed(6);
-              capturedCoordsText = lat + ', ' + lng;
+            function (position) {
+              var lat = position.coords.latitude.toFixed(6);
+              var lng = position.coords.longitude.toFixed(6);
               capturedMapsUrl = 'https://maps.google.com/?q=' + lat + ',' + lng;
 
-              btnGetGps.disabled = false;
-              if (btnGetGpsLabel) btnGetGpsLabel.textContent = 'Perbarui Titik GPS';
+              if (gpsCheckMapsLink) gpsCheckMapsLink.setAttribute('href', capturedMapsUrl);
+              if (gpsCoordsText) gpsCoordsText.textContent = 'Koordinat: ' + lat + ', ' + lng + ' — ' + capturedMapsUrl;
+              if (gpsResultCard) gpsResultCard.classList.add('visible');
 
-              gpsStatusCard.className = 'gps-status-card success';
-              gpsStatusCard.innerHTML =
-                '<strong>Titik Sharelok GPS berhasil dikunci!</strong> (' + capturedCoordsText + ')<br>' +
-                'Tautan Google Maps akan otomatis dilampirkan ke pesan WhatsApp. ' +
-                '<a href="' + capturedMapsUrl + '" target="_blank" rel="noopener noreferrer" class="gps-map-link">Cek Titik Maps &nearr;</a>';
-
-              if (customerAddressInput && !customerAddressInput.value.trim()) {
-                customerAddressInput.placeholder = 'Tambahkan patokan singkat (nomor rumah, warna pagar, gang) agar terapis mudah menemukan rumah...';
-              }
+              btnGpsCapture.disabled = false;
+              if (gpsBtnText) gpsBtnText.textContent = 'Perbarui Titik Lokasi (Sharelok GPS)';
             },
             function (err) {
-              btnGetGps.disabled = false;
-              if (btnGetGpsLabel) btnGetGpsLabel.textContent = 'Ambil Lokasi Otomatis (Sharelok GPS)';
+              btnGpsCapture.disabled = false;
+              if (gpsBtnText) gpsBtnText.textContent = 'Ambil Lokasi Saya (Sharelok GPS)';
 
-              var reason = 'Gagal mengambil lokasi GPS.';
+              var errMsg = 'Gagal mengambil lokasi GPS. Pastikan izin lokasi (Location/GPS) di HP aktif, atau centang opsi kirim sharelok manual lewat chat WhatsApp di bawah.';
               if (err && err.code === 1) {
-                reason = 'Izin lokasi ditolak oleh browser. Aktifkan izin lokasi di pengaturan browser Anda, atau centang opsi kirim Sharelok manual di WhatsApp di bawah.';
-              } else if (err && err.code === 2) {
-                reason = 'Sinyal GPS tidak tersedia. Pastikan GPS/Lokasi di HP sudah aktif lalu coba lagi.';
-              } else if (err && err.code === 3) {
-                reason = 'Waktu pencarian titik GPS habis. Silakan coba ketuk tombol sekali lagi atau gunakan Sharelok manual di WhatsApp.';
+                errMsg = 'Izin lokasi ditolak oleh browser. Silakan aktifkan izin lokasi atau centang opsi "Saya akan kirim sharelok manual langsung lewat chat WhatsApp" di bawah.';
               }
-
-              gpsStatusCard.className = 'gps-status-card error';
-              gpsStatusCard.textContent = reason;
+              if (gpsErrorNote) {
+                gpsErrorNote.textContent = errMsg;
+                gpsErrorNote.classList.add('visible');
+              }
             },
             {
               enableHighAccuracy: true,
@@ -2546,7 +2620,7 @@
         });
       }
 
-      // 6. Submit Formulir Reservasi ke WhatsApp (6285856037351)
+      // 7. Submit Formulir Reservasi ke WhatsApp (6285856037351)
       var bookingForm = document.getElementById('booking-form');
       var waConfirmCard = document.getElementById('wa-confirm-card');
       var waSummaryPreview = document.getElementById('wa-summary-preview');
@@ -2587,8 +2661,8 @@
           var serviceVal = serviceSelect ? serviceSelect.value : '';
           var dateVal = document.getElementById('booking-date').value;
           var timeVal = document.getElementById('booking-time').value;
-          var addrVal = customerAddressInput ? customerAddressInput.value.trim() : '';
           var isManualSharelok = manualSharelokCb ? manualSharelokCb.checked : false;
+          var landmarkVal = document.getElementById('house-landmark').value.trim();
           var notesVal = document.getElementById('customer-notes').value.trim();
 
           if (!nameVal || !phoneVal || !serviceVal || !dateVal || !timeVal) {
@@ -2596,8 +2670,8 @@
             return;
           }
 
-          if (!addrVal && !capturedMapsUrl && !isManualSharelok) {
-            showMessage('Mohon isi patokan/alamat rumah, gunakan tombol "Ambil Lokasi Otomatis (Sharelok GPS)", atau centang opsi kirim Sharelok manual di WhatsApp.', 'error');
+          if (!capturedMapsUrl && !isManualSharelok) {
+            showMessage('Mohon tekan tombol "Ambil Lokasi Saya (Sharelok GPS)" atau centang opsi kirim sharelok manual lewat chat WhatsApp.', 'error');
             return;
           }
 
@@ -2637,13 +2711,17 @@
             : '*Paket Layanan:* ' + serviceVal;
 
           var locationLines = [];
-          if (addrVal) {
-            locationLines.push('*Alamat / Patokan:* ' + addrVal);
-          }
           if (capturedMapsUrl) {
-            locationLines.push('*Sharelok GPS (Maps):* ' + capturedMapsUrl);
-          } else if (isManualSharelok) {
-            locationLines.push('*Sharelok:* Akan dikirim langsung via fitur Share Location WhatsApp');
+            locationLines.push('*Lokasi Homecare (Sharelok GPS):* ' + capturedMapsUrl);
+            if (isManualSharelok) {
+              locationLines.push('*Keterangan Lokasi:* Juga akan kirim sharelok manual di chat WhatsApp');
+            }
+          } else {
+            locationLines.push('*Lokasi Homecare:* Akan kirim sharelok manual langsung lewat chat WhatsApp');
+          }
+
+          if (landmarkVal) {
+            locationLines.push('*Patokan Rumah:* ' + landmarkVal);
           }
 
           var notesLine = notesVal ? notesVal : 'Tidak ada catatan khusus';
